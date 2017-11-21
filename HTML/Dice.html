@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MTG HUB</title>
+		<link rel = "stylesheet" type = "text/css" href = "style/style.css">
+		<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+   		<script type="text/javascript">
+        	google.load("jquery", "1.2.6");
+    	</script>
+    	<script type="text/javascript" src="RNG.js"></script>
+	</head>
+
+	<body style="background-color: #3366ff;">
+		<div class="Color Box">
+			<div class = "ButtonLink">
+				<h1>MTG Dice Roller</h1>
+			</div>
+			<div class = "ButtonLink">
+			<h3>Left is the Min, Right is the Max</h3>
+			</div>
+			<div class = "ButtonLink">
+			<h4>Roll a number between</h4>
+			</div>
+				<div class = "ButtonLink">
+						<input type="text" id="lownumber" value="1" />
+						 and 
+        				<input type="text" id="highnumber" value="20" />
+        				<br />
+				</div>
+        		<div class = "ButtonLink">
+        			<button id="getit">Generate!</button>
+       				<div id="randomnumber"></div>
+       			</div>
+       				
+
+			</div>
+	</body>
+</html>

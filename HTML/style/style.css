@@ -1,0 +1,68 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.ButtonLink{
+  display: flex;
+  justify-content: center; 
+}
+.button{
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s; 
+  padding:5px 5px;
+  text-align:center;
+  text-decoration:;
+  display:;
+  font-size: 15px;
+  border-radius:15px;
+  width: 200px;
+  height: 100px;
+  font-family: "arial";
+
+}
+
+.scryfall{
+  background-image: url("../scryfall.jpg");
+}
+.tappedout{
+  background-image: url("../Tappedout.png");
+}
+.oneout{
+  background-image: url("../Magic the Gathering.png");
+}
+.mtggoldfish{
+  background-image: url("../MtgGoldfish.png");
+}
+.Dice{
+  background-image: url("../Dice.jpg");
+}
+
+
+.Box{
+  width: 1500px;
+  height: 3000px;
+  box-shadow:
+  position: absolute;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+  padding: 10px
+  background: white;
+}
+.Color{
+  margin: 0 auto;
+  width: 90vw;
+  background: #FFFFFF ;
+  font-family: "arial";
+}
+
+h1{
+  margin:0px;
+}
+h2 {
+    color: #ffffff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.button:hover {
+  background-color: white;
+  color: #3366ff;
+}
