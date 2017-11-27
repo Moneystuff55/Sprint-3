@@ -1,3 +1,5 @@
+//I took the random number generation code from off the internet
+
 function IsNumeric(n){
     return !isNaN(n);
 } 
