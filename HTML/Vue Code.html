@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vue To Do Example</title>
+  <script src="https://unpkg.com/vue"></script>
+  <style>
+    body {
+        background: #A9E6E6;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+      <p>Your Todo List:</p>
+      <ul>
+          <li
+            v-for="item in items"
+            :key="item.itemId"
+          >
+            <span>
+              {{item.title}}
+            </span>
+            <a :href="item.link"><button>Link</button></a>
+            <button @click="removeItem(item.itemId)">Delete</button>
+          </li>
+      </ul>
+      <p>Add Bookmark 1st box is for the name, 2nd box is for the link:</p>
+      <input type="text" v-model="newItemTitle"/>
+      <input type="text" v-model="newLink"/>
+      <button @click="addItem">Add to To Do List.</button>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        items: [{ itemId: 1, title: 'Create a new item', link: 'Create a new link'}],
+        newItemTitle: '',
+        newLink: '',
+        latestItemId: 1,
+      },
+      methods: {
+        addItem: function () {
+          this.items.push({
+            itemId: this.latestItemId += 1,
+            title: this.newItemTitle,
+            link: this.newLink
+          })
+          this.lastestItemId += 1 
+          this.newItemTitle = "" 
+          this.newLink = "" 
+        },
+        removeItem: function (itemId) {
+          this.items = this.items.filter((item) => { return item.itemId !== itemId })
+        }
+      }
+    })
+  </script>
+</body>
+</html>

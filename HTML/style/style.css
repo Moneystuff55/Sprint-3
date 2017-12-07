@@ -48,6 +48,15 @@ body{
   padding: 10px
   background: white;
 }
+.Bookmark{
+  width: 400px;
+  height: 200px;
+  box-shadow:
+  position: absolute;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+  padding: 10px
+  background: #d3d3d3;
+}
 .Color{
   margin: 0 auto;
   width: 90vw;
