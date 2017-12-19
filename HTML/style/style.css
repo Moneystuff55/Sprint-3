@@ -3,7 +3,11 @@ body{
   padding: 0px;
 }
 
-.ButtonLink{
+.GenericLink{
+  display: flex;
+  justify-content: center; 
+}
+.BookmarkLink{
   display: flex;
   justify-content: center; 
 }
@@ -49,13 +53,11 @@ body{
   background: white;
 }
 .Bookmark{
-  width: 400px;
-  height: 200px;
-  box-shadow:
-  position: absolute;
+  box-sizing: padding-box;
+  overflow: hidden;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-  padding: 10px
-  background: #d3d3d3;
+  padding: 10px;
+  background: white;
 }
 .Color{
   margin: 0 auto;
@@ -74,4 +76,13 @@ h2 {
 .button:hover {
   background-color: white;
   color: #3366ff;
+}
+.textCenter {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+.NumberBox {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+  padding: 10px;
 }

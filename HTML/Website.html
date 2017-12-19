@@ -9,7 +9,7 @@
 
 	<body style="background-color: #3366ff;">
 		<div class="Color Box">
-				<div class = "ButtonLink">
+				<div class = "GenericLink">
 					<a href="https://scryfall.com/"><button class = "button scryfall"><h2> Scryfall </h2></button></a>
 					<a href="http://tappedout.net/"><button class = "button tappedout"><h2> Tappedout </h2></button></a>
 					<a href="https://oneout.io/"><button class = "button oneout"><h2> OneOut </h2></button></a>
@@ -18,53 +18,54 @@
 					<a href="Dice.html"><button class = "button Dice"><h2> Dice Roller </h2></button></a>
 				</div>
 			<body>
-				<div class = "ButtonLink">
+				<div class = "BookmarkLink">
 					<div class = "Bookmark">	
 						<div id="app">
-						<p>Your Bookmark list:</p>
-						<ul>
-							<li
-								v-for="item in items"
-								:key="item.itemId"
-								>
-								<span>
-									{{item.title}}
-								</span>
-								<a :href="item.link"><button>Link</button></a>
-								<button @click="removeItem(item.itemId)">Delete</button>
-							</li>
-						</ul>
-						<p>Add Bookmark 1st box is for the name, 2nd box is for the link:</p>
-						<input type="text" v-model="newItemTitle"/>
-						<input type="text" v-model="newLink"/>
-						<button @click="addItem">Add to Bookmark List.</button>
+							<p>Your Bookmark list:</p>
+							<ul>
+								<li
+									v-for="item in items"
+									:key="item.itemId"
+									>
+									<span>
+										{{item.title}}
+									</span>
+									<a :href="item.link"><button class="ButtonLink">Link</button></a>
+									<button class="ButtonLink" @click="removeItem(item.itemId)">Delete</button>
+								</li>
+							</ul>
+								<p>Add Bookmark 1st box is for the name, 2nd box is for the link:</p>
+								<input type="text" v-model="newItemTitle"/>
+								<input type="text" v-model="newLink"/>
+								<button class="ButtonLink" @click="addItem">Add to Bookmark List.</button>
 						</div>
-						<script>
-							var app = new Vue({
-							el: '#app',
-							data: {
-							items: [{ itemId: 1, title: 'Example Bookmark', link: 'https://www.google.com/'}],
-							newItemTitle: '',
-							newLink: '',
-							latestItemId: 1,
-							},
-							methods: {
-							addItem: function () {
-							this.items.push({
-							itemId: this.latestItemId += 1,
-							title: this.newItemTitle,
-							link: this.newLink
-							})
-							this.lastestItemId += 1 
-							this.newItemTitle = "" 
-							this.newLink = "" 
-							},
-							removeItem: function (itemId) {
-							this.items = this.items.filter((item) => { return item.itemId !== itemId })
-							}
-							}
-							})
-						</script>
+
+							<script>
+								var app = new Vue({
+								el: '#app',
+								data: {
+								items: [{ itemId: 1, title: 'Example Bookmark', link: 'https://www.google.com/'}],
+								newItemTitle: '',
+								newLink: '',
+								latestItemId: 1,
+								},
+								methods: {
+								addItem: function () {
+								this.items.push({
+								itemId: this.latestItemId += 1,
+								title: this.newItemTitle,
+								link: this.newLink
+								})
+								this.lastestItemId += 1 
+								this.newItemTitle = "" 
+								this.newLink = "" 
+								},
+								removeItem: function (itemId) {
+								this.items = this.items.filter((item) => { return item.itemId !== itemId })
+								}
+								}
+								})
+							</script>
 					</div>
 				</div>
 			</body>
